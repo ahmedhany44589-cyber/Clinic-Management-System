@@ -9,6 +9,6 @@ namespace ClinicManagementSystem.Domain.Entities
 {
     public class Appointment : BaseEntity
     {
-
+      
     }
 }
