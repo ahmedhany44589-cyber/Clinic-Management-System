@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClinicManagementSystem.Domain.Comman;
 
-namespace ClinicManagementSystem.Domain.Entities
+namespace ClinicManagementSystem.Domain.Enums
 {
-    public class Lab_Result : BaseEntity
+    public enum LabResultStatus
     {
+        Pending = 1,
+        Ready = 2
     }
 }

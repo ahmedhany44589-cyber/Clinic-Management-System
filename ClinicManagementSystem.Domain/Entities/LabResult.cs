@@ -5,16 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClinicManagementSystem.Domain.Comman;
+using ClinicManagementSystem.Domain.Enums;
 
 namespace ClinicManagementSystem.Domain.Entities
 {
-    public class Prescription : BaseEntity
+    public class LabResult : BaseEntity
     {
         [ForeignKey("visit")]
         public int VisitId { get; set; }
         public Visit visit { get; set; }
-        public string? Notes { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public ICollection<PrescriptionItem> PrescriptionItems { get; set; } = new List<PrescriptionItem>();
+        public string TestName { get; set; }
+        public string? Result { get; set; }
+        public LabResultStatus Status { get; set; }
     }
 }

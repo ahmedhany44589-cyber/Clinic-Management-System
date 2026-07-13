@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClinicManagementSystem.Domain.Comman;
 
 namespace ClinicManagementSystem.Domain.Interfaces
 {
-    public interface IRepository
+    public interface IRepository<T> where T : BaseEntity
     {
+        Task<T> GetByIdasync(int id);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task<T> AddAsync (T obj);
+        void Updtae (T obj);
+        void Delete(T obj);
     }
 }
