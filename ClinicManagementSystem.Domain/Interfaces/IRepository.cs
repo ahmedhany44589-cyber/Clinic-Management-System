@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using ClinicManagementSystem.Domain.Comman;
@@ -14,5 +15,7 @@ namespace ClinicManagementSystem.Domain.Interfaces
         Task<T> AddAsync (T obj);
         void Updtae (T obj);
         void Delete(T obj);
+        Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
+
     }
 }
