@@ -7,7 +7,51 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.2.0" />
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="MediatR" Version="14.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClinicManagementSystem.Domain\ClinicManagementSystem.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Behaviors\" />
+    <Folder Include="Common\Interfaces\" />
+    <Folder Include="Common\Mappings\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Features\Appointments\Commands\" />
+    <Folder Include="Features\Appointments\Queries\" />
+    <Folder Include="Features\Attendaces\Commands\" />
+    <Folder Include="Features\Attendaces\Queries\" />
+    <Folder Include="Features\Departments\Commands\" />
+    <Folder Include="Features\Departments\Queries\" />
+    <Folder Include="Features\Doctors\Commands\" />
+    <Folder Include="Features\Doctors\Queries\" />
+    <Folder Include="Features\Employees\Commands\" />
+    <Folder Include="Features\Employees\Queries\" />
+    <Folder Include="Features\Invoices\Commands\" />
+    <Folder Include="Features\Invoices\Queries\" />
+    <Folder Include="Features\LabResults\Commands\" />
+    <Folder Include="Features\LabResults\Queries\" />
+    <Folder Include="Features\LeaveRequests\Commands\" />
+    <Folder Include="Features\LeaveRequests\Queries\" />
+    <Folder Include="Features\MedicalFiles\Commands\" />
+    <Folder Include="Features\MedicalFiles\Queries\" />
+    <Folder Include="Features\Patients\Queries\" />
+    <Folder Include="Features\Payments\Queries\" />
+    <Folder Include="Features\PrescriptionItems\Queries\" />
+    <Folder Include="Features\Prescriptions\Queries\" />
+    <Folder Include="Features\Patients\Commands\" />
+    <Folder Include="Features\Payments\Commands\" />
+    <Folder Include="Features\PrescriptionItems\Commands\" />
+    <Folder Include="Features\Prescriptions\Commands\" />
+    <Folder Include="Features\Specializations\Commands\" />
+    <Folder Include="Features\Specializations\Queries\" />
+    <Folder Include="Features\Visits\Commands\" />
+    <Folder Include="Features\Visits\Queries\" />
   </ItemGroup>
 
 </Project>
