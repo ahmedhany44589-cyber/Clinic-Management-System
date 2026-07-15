@@ -1,4 +1,6 @@
 
+using ClinicManagementSystem.Infrastructure.Extension;
+
 namespace Clinic_Management_System
 {
     public class Program
@@ -11,6 +13,7 @@ namespace Clinic_Management_System
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddInfrastructureServices(builder.Configuration);
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 

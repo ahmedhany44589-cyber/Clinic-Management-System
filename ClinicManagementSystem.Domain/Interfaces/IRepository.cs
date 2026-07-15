@@ -12,9 +12,9 @@ namespace ClinicManagementSystem.Domain.Interfaces
     {
         Task<T> GetByIdasync(int id);
         Task<IEnumerable<T>> GetAllAsync();
-        Task<T> AddAsync (T obj);
+        Task AddAsync (T obj);
         void Updtae (T obj);
-        void Delete(T obj);
+        Task Delete(int id);
         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
 
     }
