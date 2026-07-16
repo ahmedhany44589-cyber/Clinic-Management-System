@@ -20,8 +20,6 @@
   <ItemGroup>
     <Folder Include="Behaviors\" />
     <Folder Include="Common\Interfaces\" />
-    <Folder Include="Common\Mappings\" />
-    <Folder Include="DTOs\" />
     <Folder Include="Features\Appointments\Commands\" />
     <Folder Include="Features\Appointments\Queries\" />
     <Folder Include="Features\Attendaces\Commands\" />
@@ -44,7 +42,6 @@
     <Folder Include="Features\Payments\Queries\" />
     <Folder Include="Features\PrescriptionItems\Queries\" />
     <Folder Include="Features\Prescriptions\Queries\" />
-    <Folder Include="Features\Patients\Commands\" />
     <Folder Include="Features\Payments\Commands\" />
     <Folder Include="Features\PrescriptionItems\Commands\" />
     <Folder Include="Features\Prescriptions\Commands\" />
