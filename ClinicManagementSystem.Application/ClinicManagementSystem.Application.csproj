@@ -38,7 +38,6 @@
     <Folder Include="Features\LeaveRequests\Queries\" />
     <Folder Include="Features\MedicalFiles\Commands\" />
     <Folder Include="Features\MedicalFiles\Queries\" />
-    <Folder Include="Features\Patients\Queries\" />
     <Folder Include="Features\Payments\Queries\" />
     <Folder Include="Features\PrescriptionItems\Queries\" />
     <Folder Include="Features\Prescriptions\Queries\" />
