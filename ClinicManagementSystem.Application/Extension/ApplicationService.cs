@@ -4,7 +4,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using ClinicManagementSystem.Application.Behaviors;
 using ClinicManagementSystem.Application.Common.Mappings;
+using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ClinicManagementSystem.Application.Extension
@@ -22,6 +25,9 @@ namespace ClinicManagementSystem.Application.Extension
             services.AddAutoMapper(cfg => {
                 cfg.AddProfile<MappingProfile>();
             });
+            services.AddValidatorsFromAssembly(assembly);
+            services.AddTransient(typeof(IPipelineBehavior<,>),
+                typeof(ValidationBehavior<,>));
         }
     }
 }
