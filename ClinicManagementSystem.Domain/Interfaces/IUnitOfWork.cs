@@ -10,7 +10,7 @@ namespace ClinicManagementSystem.Domain.Interfaces
     public interface IUnitOfWork : IDisposable
     {
         IRepository<Patient> Patients { get; }
-        IRepository<Doctor> Doctor { get; }
+        IRepository<Doctor> Doctor{ get; }
         IRepository<Specialization> Specialization { get; }
         IRepository<Appointment> Appointment { get; }
         IRepository<MedicalFile> MedicalFile { get; }

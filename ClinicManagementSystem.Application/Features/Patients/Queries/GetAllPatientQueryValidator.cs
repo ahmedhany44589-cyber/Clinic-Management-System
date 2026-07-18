@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClinicManagementSystem.Application.Features.Patients.Queries
 {
-    internal class GetAllPatientCommand
+    public class GetAllPatientQueryValidator
     {
     }
 }

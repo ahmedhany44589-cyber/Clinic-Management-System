@@ -13,8 +13,8 @@ namespace ClinicManagementSystem.Application.Common.Mappings
     public class    MappingProfile : Profile
     {
         public MappingProfile() {
-            CreateMap<Patient, PatientDto>();
-            CreateMap< CreatePatientCommand,Patient>();
+            CreateMap<Patient, PatientDto>().ReverseMap();
+            CreateMap< CreatePatientCommand,Patient>().ReverseMap();
            
         }
     }

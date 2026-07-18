@@ -1,4 +1,5 @@
 ﻿using ClinicManagementSystem.Application.Features.Patients.Commands;
+using ClinicManagementSystem.Application.Features.Patients.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,5 +22,12 @@ namespace Clinic_Management_System.Controllers
             var Patient_Id=await _mediator.Send(command);
             return Ok(Patient_Id);
         }
+        [HttpGet]
+        public async Task<IActionResult> GetAllPatients([FromQuery] GetAllPatientQuery query)
+        {
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
     }
 }
