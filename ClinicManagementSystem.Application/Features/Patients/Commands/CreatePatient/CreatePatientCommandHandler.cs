@@ -8,7 +8,7 @@ using ClinicManagementSystem.Domain.Entities;
 using ClinicManagementSystem.Domain.Interfaces;
 using MediatR;
 
-namespace ClinicManagementSystem.Application.Features.Patients.Commands
+namespace ClinicManagementSystem.Application.Features.Patients.Commands.CreatePatient
 {
     public class  CreatePatientCommandHandler(IUnitOfWork unit, IMapper mapper) : IRequestHandler<CreatePatientCommand, int>
     {

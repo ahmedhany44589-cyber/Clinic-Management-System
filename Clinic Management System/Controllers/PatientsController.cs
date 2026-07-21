@@ -1,5 +1,6 @@
-﻿using ClinicManagementSystem.Application.Features.Patients.Commands;
-using ClinicManagementSystem.Application.Features.Patients.Queries;
+﻿using ClinicManagementSystem.Application.Features.Patients.Commands.CreatePatient;
+using ClinicManagementSystem.Application.Features.Patients.Queries.GetAllPatient;
+using ClinicManagementSystem.Application.Features.Patients.Queries.GetById;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,6 +29,19 @@ namespace Clinic_Management_System.Controllers
             var result = await _mediator.Send(query);
             return Ok(result);
         }
+        [HttpGet]
+        public async Task<IActionResult> GetPatientById(int Id)
+        {
+            GetPatientByIdQuery reqest = new GetPatientByIdQuery() ;
+            reqest.Id = Id ;
+            
+            var result = await _mediator.Send(reqest);
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
+        }
+
 
     }
 }

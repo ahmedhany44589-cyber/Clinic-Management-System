@@ -7,7 +7,7 @@ using ClinicManagementSystem.Domain.Entities;
 using ClinicManagementSystem.Domain.Enums;
 using MediatR;
 
-namespace ClinicManagementSystem.Application.Features.Patients.Commands
+namespace ClinicManagementSystem.Application.Features.Patients.Commands.CreatePatient
 {
     public class CreatePatientCommand :IRequest<int>
     {

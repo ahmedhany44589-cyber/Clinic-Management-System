@@ -25,8 +25,6 @@
     <Folder Include="Features\Attendaces\Queries\" />
     <Folder Include="Features\Departments\Commands\" />
     <Folder Include="Features\Departments\Queries\" />
-    <Folder Include="Features\Doctors\Commands\" />
-    <Folder Include="Features\Doctors\Queries\" />
     <Folder Include="Features\Employees\Commands\" />
     <Folder Include="Features\Employees\Queries\" />
     <Folder Include="Features\Invoices\Commands\" />

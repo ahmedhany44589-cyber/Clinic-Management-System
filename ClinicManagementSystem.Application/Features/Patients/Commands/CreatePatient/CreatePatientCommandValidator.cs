@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentValidation;
 
-namespace ClinicManagementSystem.Application.Features.Patients.Commands
+namespace ClinicManagementSystem.Application.Features.Patients.Commands.CreatePatient
 {
     public class CreatePatientCommandValidator:AbstractValidator<CreatePatientCommand>
     {

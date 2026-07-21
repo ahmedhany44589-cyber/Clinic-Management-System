@@ -7,11 +7,11 @@ using ClinicManagementSystem.Application.Common.Models;
 using ClinicManagementSystem.Application.DTOs;
 using MediatR;
 
-namespace ClinicManagementSystem.Application.Features.Patients.Queries
+namespace ClinicManagementSystem.Application.Features.Doctors.Queries.GetAllDoctors
 {
-    public class GetAllPatientQuery : IRequest<PaginatedResult<PatientDto>>
+    public class GetAllDoctorsQuery :IRequest<PaginatedResult<DoctorDto>>
     {
         public int PageNumber { get; set; } = 1;
-            public int PageSize { get; set; } = 10;
+        public int PageSize { get; set; } = 10;
     }
 }

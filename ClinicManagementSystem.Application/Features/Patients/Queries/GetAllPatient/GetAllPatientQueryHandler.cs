@@ -10,7 +10,7 @@ using ClinicManagementSystem.Domain.Entities;
 using ClinicManagementSystem.Domain.Interfaces;
 using MediatR;
 
-namespace ClinicManagementSystem.Application.Features.Patients.Queries
+namespace ClinicManagementSystem.Application.Features.Patients.Queries.GetAllPatient
 {
     public class GetAllPatientQueryHandler(IUnitOfWork unit,IMapper mapper) : IRequestHandler<GetAllPatientQuery, PaginatedResult<PatientDto>>
     {
