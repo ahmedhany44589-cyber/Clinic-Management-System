@@ -14,7 +14,7 @@ namespace ClinicManagementSystem.Domain.Interfaces
         Task<IEnumerable<T>> GetAllAsync();
         Task AddAsync (T obj);
         void Updtae (T obj);
-        Task Delete(int id);
+        Task Delete(T obj);
         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
 
     }

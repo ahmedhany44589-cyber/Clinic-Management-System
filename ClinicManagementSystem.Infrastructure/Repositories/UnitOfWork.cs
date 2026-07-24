@@ -19,7 +19,7 @@ namespace ClinicManagementSystem.Infrastructure.Repositories
         }
         public IRepository<Patient> Patients => new Repository<Patient>(_context);
 
-        public IRepository<Doctor> Doctor => new Repository<Doctor>(_context);
+        public DoctorIRepository Doctors => new DoctorRepository(_context);
 
         public IRepository<Specialization> Specialization => new Repository<Specialization>(_context);
 

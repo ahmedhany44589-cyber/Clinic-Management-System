@@ -1,4 +1,6 @@
 ﻿using ClinicManagementSystem.Application.Features.Patients.Commands.CreatePatient;
+using ClinicManagementSystem.Application.Features.Patients.Commands.DeletePatient;
+using ClinicManagementSystem.Application.Features.Patients.Commands.UpdatePatient;
 using ClinicManagementSystem.Application.Features.Patients.Queries.GetAllPatient;
 using ClinicManagementSystem.Application.Features.Patients.Queries.GetById;
 using MediatR;
@@ -29,7 +31,7 @@ namespace Clinic_Management_System.Controllers
             var result = await _mediator.Send(query);
             return Ok(result);
         }
-        [HttpGet]
+        [HttpGet("{Id}")]
         public async Task<IActionResult> GetPatientById(int Id)
         {
             GetPatientByIdQuery reqest = new GetPatientByIdQuery() ;
@@ -40,6 +42,23 @@ namespace Clinic_Management_System.Controllers
                 return NotFound();
 
             return Ok(result);
+        }
+        [HttpPut("Id")]
+        public async Task<IActionResult> UpdatePatient(int Id , [FromBody ] UpdatePatientCommand request)
+        {
+            if (Id != request.Id)
+                return BadRequest("Id Mismatch");
+            bool result = await _mediator.Send(request);
+            if (result == false) return NotFound();
+            return Ok();
+        }
+        [HttpDelete("Id")]
+        public async Task<IActionResult> DeletePatient(int id)
+        {
+            DeletePatientCommand reqest = new DeletePatientCommand() ;
+            reqest.Id = id ;
+            await _mediator.Send(reqest);
+            return Ok();
         }
 
 

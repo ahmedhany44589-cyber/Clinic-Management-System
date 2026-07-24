@@ -15,14 +15,13 @@ namespace ClinicManagementSystem.Application.Features.Doctors.Queries.GetAllDoct
     {
         public async Task<PaginatedResult<DoctorDto>> Handle(GetAllDoctorsQuery request, CancellationToken cancellationToken)
         {
-            var AllDoctors = await unit.Doctor.GetAllAsync();
-            var totalcount = AllDoctors.Count();
-            var PagedDoctors = AllDoctors.Skip((request.PageNumber-1)*request.PageSize).Take(request.PageSize).ToList();
-            var DoctorsDto = mapper.Map<List<DoctorDto>>(PagedDoctors);
+            var (Doctors, totalCount) = await unit.Doctors.GetPagedWithSpecializationAsync(request.PageNumber, request.PageSize);
+            
+            var DoctorsDto = mapper.Map<List<DoctorDto>>(Doctors);
             return new PaginatedResult<DoctorDto>()
             {
                 Items = DoctorsDto,
-                TotalCount = totalcount,
+                TotalCount = totalCount,
                 PageNumber = request.PageNumber,
                 PageSize = request.PageSize,
             };

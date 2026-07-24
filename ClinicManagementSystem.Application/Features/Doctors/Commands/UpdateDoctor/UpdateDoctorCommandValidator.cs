@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicManagementSystem.Application.Features.Patients.Queries.GetAllPatient
+namespace ClinicManagementSystem.Application.Features.Doctors.Commands.UpdateDoctor
 {
-    public class GetAllPatientQueryValidator
+    public class UpdateDoctorCommandValidator
     {
-
     }
 }

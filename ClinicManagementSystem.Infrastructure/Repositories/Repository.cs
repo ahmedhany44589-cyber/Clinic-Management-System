@@ -23,12 +23,14 @@ namespace ClinicManagementSystem.Infrastructure.Repositories
             await _context.Set<T>().AddAsync(obj);
         }
 
-        public async Task Delete(int id)
+        public async Task Delete(T obj)
         {
-            T obj =await  GetByIdasync(id);
-            _context.Set<T>().Remove(obj);
+            
+            obj.IsDeleted = true;
+            obj.UpdatedAt = DateTime.UtcNow;
+            _context.Update(obj);
+            
         }
-
         public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
         {
             return await _context.Set<T>().Where(predicate).ToListAsync();

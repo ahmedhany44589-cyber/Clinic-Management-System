@@ -17,6 +17,7 @@ namespace ClinicManagementSystem.Infrastructure.Extension
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+             services.AddScoped<DoctorIRepository, DoctorRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;

@@ -15,7 +15,7 @@ namespace ClinicManagementSystem.Application.Features.Doctors.Commands.CreateDoc
         public async Task<int> Handle(CreateDoctorCommand request, CancellationToken cancellationToken)
         {
             var des = mapper.Map<Doctor>(request);
-            await unit.Doctor.AddAsync(des);
+            await unit.Doctors.AddAsync(des);
             await unit.SaveChangesAsync();
             return des.Id;
         }
