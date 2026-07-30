@@ -19,6 +19,8 @@ namespace ClinicManagementSystem.Infrastructure.Extension
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
              services.AddScoped<DoctorIRepository, DoctorRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<AppointmentIRepository, AppointmentRepository>();
+            services.AddScoped<VisitIRepository, VisitRepository>();
 
             return services;
         }

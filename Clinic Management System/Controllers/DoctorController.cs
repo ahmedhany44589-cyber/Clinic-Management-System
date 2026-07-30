@@ -49,7 +49,7 @@ namespace Clinic_Management_System.Controllers
             await mediator.Send(reqest);
             return Ok();
         }
-        [HttpPost]
+        [HttpPost("Id")]
         public async Task<IActionResult> UpdatePatient(int Id, [FromBody] UpdatePatientCommand request)
         {
             if (Id != request.Id)

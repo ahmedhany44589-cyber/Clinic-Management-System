@@ -22,12 +22,11 @@ namespace ClinicManagementSystem.Infrastructure.Repositories
         public DoctorIRepository Doctors => new DoctorRepository(_context);
 
         public IRepository<Specialization> Specialization => new Repository<Specialization>(_context);
-
-        public IRepository<Appointment> Appointment => new Repository<Appointment>(_context);
+        
 
         public IRepository<MedicalFile> MedicalFile => new Repository<MedicalFile>(_context);
 
-        public IRepository<Visit> Visit => new Repository<Visit>(_context);
+        public VisitIRepository Visits => new VisitRepository(_context);
 
         public IRepository<Invoice> Invoice => new Repository<Invoice>(_context);
 
@@ -45,6 +44,10 @@ namespace ClinicManagementSystem.Infrastructure.Repositories
         public IRepository<Attendance> Attendance => new Repository<Attendance>(_context);
 
         public IRepository<LeaveRequest> LeaveRequest => new Repository<LeaveRequest>(_context);
+
+
+        public AppointmentIRepository Appointment => new AppointmentRepository(_context);
+
 
         public void Dispose()
         {

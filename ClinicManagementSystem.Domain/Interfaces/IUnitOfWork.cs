@@ -12,9 +12,9 @@ namespace ClinicManagementSystem.Domain.Interfaces
         IRepository<Patient> Patients { get; }
         DoctorIRepository Doctors{ get; }
         IRepository<Specialization> Specialization { get; }
-        IRepository<Appointment> Appointment { get; }
+        AppointmentIRepository Appointment { get; }
         IRepository<MedicalFile> MedicalFile { get; }
-        IRepository<Visit> Visit { get; }
+        VisitIRepository Visits { get; }
         IRepository<Invoice> Invoice { get; }
         IRepository<Payment> Payment { get; }
         IRepository<Prescription> Prescription { get; }

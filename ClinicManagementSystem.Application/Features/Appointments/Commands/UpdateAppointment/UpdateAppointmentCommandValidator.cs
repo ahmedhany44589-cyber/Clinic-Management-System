@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentValidation;
 
-namespace ClinicManagementSystem.Application.Features.Appointments.Commands.CreateAppointment
+namespace ClinicManagementSystem.Application.Features.Appointments.Commands.UpdateAppointment
 {
-    public class CreateAppointmentCommandValidator : AbstractValidator<CreateAppointmentCommand>
+    public class UpdateAppointmentCommandValidator : AbstractValidator<UpdateAppointmentCommand>
     {
-        public CreateAppointmentCommandValidator()
+        public UpdateAppointmentCommandValidator()
         {
+            RuleFor(x => x.Id)
+                .GreaterThan(0).WithMessage("معرف الموعد غير صالح");
+
             RuleFor(x => x.DoctorId)
                 .GreaterThan(0).WithMessage("يجب اختيار الدكتور");
 
